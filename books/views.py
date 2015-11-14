@@ -1,8 +1,7 @@
 from django.shortcuts import render, render_to_response, get_object_or_404
 from models import Book, Author
 from django.http import HttpResponse, HttpResponseRedirect
-from forms import CreateBookForm, CreateAuthorForm, ChangeBookForm, ChangeAuthorForm
-# Create your views here.
+from forms import *
 def IndexShow(request):
     book_set = Book.objects.all()
     if request.method=="POST":
